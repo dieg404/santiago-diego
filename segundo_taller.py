@@ -16,10 +16,6 @@ def ml(): #ml -> "Menú Lista"
 def contador(lista):
     return len(lista)
 
-# segunda funcion
-def contador(lista):
-    return len(lista)
-
 #tercera funcion
 def posicion(lista,n):
    i=0
@@ -32,20 +28,7 @@ def posicion(lista,n):
         
 
 
-#tercera funcion
-def posicion(lista):
-    i=0
-    ubicacion=1
-    n=int(input("Ingrese el numero de posicion que desea saber: "))
-    while (i==n):
-        for i in lista:
-            print(i)
-    i+=1
-
 # Cuarta funcion: Verificar si la variable ingresada está en la lista
 
-print("cambie algo hp hagalo mlp lo reto")
 
 
-
-# Cuarta funcion: Verificar si la variable ingresada está en la lista
