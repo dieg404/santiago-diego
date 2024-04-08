@@ -28,7 +28,7 @@ def posicion(lista,n):
         
 
 # Cuarta funcion: Verificar si la variable ingresada está en la lista
-
+print("cambie algo hp hagalo mlp lo reto")
 
 
 
