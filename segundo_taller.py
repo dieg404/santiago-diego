@@ -63,4 +63,17 @@ def eliminacion_posicion(lista,x):
    else:
       return "se encuentra fuera del rango"
 
-# Novena Funcion:         
+# Novena Funcion: Concatenacion de dos listas
+def concatenar(lista,lista_b):
+   lista.extend(lista_b)
+   return lista
+
+# Decima Funcion: Remover elemento y agregar elemento nuevo
+def remover_añadir(lista,a):
+   if a<=len(lista):
+    b=int(input("Ingrese el elemento que desea añadir: "))
+    lista[a]= b
+    return lista
+   else:
+      return "Posicion fuera de rango"
+     
