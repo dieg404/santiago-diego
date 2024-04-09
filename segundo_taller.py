@@ -10,7 +10,7 @@ def ml(): #ml -> "Menú Lista"
    print('7. "Sacar un elemento especifico de la lista."')
    print('8. "Sacar un elemento de una posicion en especifico."')
    print('9. "Concantenar dos listas."')
-   print('10. "Remplazar algun elemento de la lista."')    
+   print('10."Remplazar algun elemento de la lista."')    
 
 # segunda funcion: Contar cuantos elementos se encunetran en una lista
 def contador(lista):
