@@ -26,9 +26,14 @@ def posicion(lista,n):
    else:
        return "Posicion fuera de rango"
         
-
-
 # Cuarta funcion: Verificar si la variable ingresada está en la lista
-
+def elemento(lista,m):
+  i=1
+  for i in lista: 
+    if (i==m):
+      return "fue encontrado en la lista"
+  return "no se encuentra en la lista"    
+        
+        
 
 
