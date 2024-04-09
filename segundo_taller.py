@@ -83,10 +83,17 @@ def remover_añadir(lista,a):
 def implementacion(x):
    if x==1:
       print(f"El numero de elementos que se encuentran en la lista A son {contador(lista_a)}")
-   if x==2:
+   elif x==2:
       n=int(input("Ingrese la posicion del elemento que desea saber: "))
-      print(f"El elemento {n} {posicion(lista_a,n)}")
-
+      print(f"En la posicion {n} {posicion(lista_a,n)}")
+   elif x==3:
+      n=int(input("Ingrese el elemento que desea saber si se encuentra en la lista: "))
+      print(f"El elemento {n} {elemento(lista_a,n)}")
+   elif x==4:
+      print(impresion(lista_a))
+   elif x==5:
+      n=int(input("¿Cuantos elementos desea ingresar?: "))
+      print(f"Los elementos fueron ingresados {agregar(lista_a,n)}")
 
 
 
