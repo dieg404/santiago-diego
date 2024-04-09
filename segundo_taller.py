@@ -1,9 +1,12 @@
-# primera funcion: Mostrar el menú de las opciones de lista
+import random
 
-def ml(): #ml -> "Menú Lista"
-   print('1. "Imprimir menú de las opciones de lista.')
-   print('2. "Contar los elementos totales que tiene una lsita.')
-   print('3. "Mostrar un elemento de una posicione en especifica de la lista."')
+# primera funcion: Mostrar el menú de las opciones de lista
+def ml(x): #ml -> "Menú Lista"
+   if x==1:
+    print('1. "Contar los elementos totales que tiene una lista.')
+    print(f"El numero de elementos que se encuentran en la lista A son {contador(lista_a)}")
+   elif x==2:
+    print('2. "Mostrar un elemento de una posicione en especifica de la lista."')
    print('4. "Verificar si la variable ingresada está en la lista."')
    print('5. "Mostrar todos los elemntos de la lista."')
    print('6. "Agregar nuevo elemento a una lista."')
@@ -13,8 +16,8 @@ def ml(): #ml -> "Menú Lista"
    print('10."Remplazar algun elemento de la lista."')    
 
 # segunda funcion: Contar cuantos elementos se encunetran en una lista
-def contador(lista):
-    return len(lista)
+def contador(lista_a):
+    return len(lista_a)
 
 #tercera funcion: Identificar en que posicion se encuentra un elemento
 def posicion(lista,n):
@@ -71,9 +74,25 @@ def concatenar(lista,lista_b):
 # Decima Funcion: Remover elemento y agregar elemento nuevo
 def remover_añadir(lista,a):
    if a<=len(lista):
+
+
     b=int(input("Ingrese el elemento que desea añadir: "))
     lista[a]= b
     return lista
    else:
       return "Posicion fuera de rango"
-     
+
+# Inicio de codigo
+lista_a=[]
+lista_b=[]
+a=int(input("Ingrese cuantos datos desea ingresar para la lista A: "))
+b=int(input("Ingrese cuantos datos desea ingresar para la lista B: "))
+#Bucles para la creacion de las listas con numeros asignados por el sistema
+for i in range(a+1):
+   x=random.randint(1,20)
+   lista_a.append(x)
+for i in range(b+1):
+   x=random.randint(1,20)
+   lista_b.append(x)
+#Fin de bucles creacion de listas
+           
