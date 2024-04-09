@@ -12,11 +12,11 @@ def ml(): #ml -> "Menú Lista"
    print('9. "Concantenar dos listas."')
    print('10. "Remplazar algun elemento de la lista."')    
 
-# segunda funcion
+# segunda funcion: Contar cuantos elementos se encunetran en una lista
 def contador(lista):
     return len(lista)
 
-#tercera funcion
+#tercera funcion: Identificar en que posicion se encuentra un elemento
 def posicion(lista,n):
    i=0
    if n<= len(lista):
@@ -33,7 +33,24 @@ def elemento(lista,m):
     if (i==m):
       return "fue encontrado en la lista"
   return "no se encuentra en la lista"    
-        
-        
 
+# Quinta Funcion: Imprimir elementos de una lista        
+def impresion(lista):
+   return lista
 
+# Sexta Funcion: Agregar elementos a una lista
+def agregar(lista,n):
+  i=1
+  for i in range(n):
+    m=int(input("Ingrese el nuevo elemento a la lista: "))
+    lista.append(m)
+  return lista  
+
+# Septima Funcion:
+def eliminar_elemento(lista,x):
+  i=1
+  for i in lista: 
+    if i==x:
+      lista.remove(i)
+      return  f"fue borrado {lista}"
+  return "no fue encontrado"
