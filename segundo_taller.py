@@ -46,7 +46,7 @@ def agregar(lista,n):
     lista.append(m)
   return lista  
 
-# Septima Funcion:
+# Septima Funcion: Eliminar elemento de un lista
 def eliminar_elemento(lista,x):
   i=1
   for i in lista: 
@@ -54,3 +54,13 @@ def eliminar_elemento(lista,x):
       lista.remove(i)
       return  f"fue borrado {lista}"
   return "no fue encontrado"
+
+# Octava Funcion: Eliminar elemento de una lista por su posicion
+def eliminacion_posicion(lista,x):
+   if x<=len(lista):
+      del lista[x]
+      return f"fue eliminada {lista}"
+   else:
+      return "se encuentra fuera del rango"
+
+# Novena Funcion:         
