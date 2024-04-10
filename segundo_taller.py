@@ -109,7 +109,12 @@ def implementacion(x):
 lista_a=[]
 lista_b=[]
 lista_nueva=[]
+#Opcion de escoger si rellenar manualmente o automaticamente
 opcion=int(input("Desea rellenar la lista manualmente '1' o automaticamente '2': "))
+while opcion<1 or opcion>2:
+   print("Opcion invalida")
+   opcion=int(input("Desea rellenar la lista manualmente '1' o automaticamente '2': ")) 
+#Condicional de relleno de listas
 if (opcion==1):
    a=int(input("Ingrese cuantos datos desea ingresar para la lista A: "))
    b=int(input("Ingrese cuantos datos desea ingresar para la lista B: "))
@@ -126,15 +131,18 @@ elif (opcion==2):
    b=int(input("Ingrese cuantos datos desea ingresar para la lista B: "))
    #Bucles para la creacion de las listas con numeros asignados por el sistema
    for i in range(a):
-      x=random.randint(1,20)
+      x=random.randint(1,50)
       lista_a.append(x)
    for i in range(b):
-      x=random.randint(1,20)
+      x=random.randint(1,50)
       lista_b.append(x)
    #Fin de bucles creacion de listas
+#Fin de condicional de relleno de listas
 
+#Llamado a la funcion de menu
 ml(lista_a,lista_b)
 x=int(input("Ingrese la opcion que desea: "))
+#Ciclo antibobos
 while x<=0 or x>9:
    print("Opcion no valida")
    x=int(input("Ingrese la opcion que desea: "))
