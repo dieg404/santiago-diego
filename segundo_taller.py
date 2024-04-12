@@ -10,8 +10,7 @@ def ml(lista_a,lista_b): #ml -> "Menú Lista"
    print('6. Sacar un elemento especifico de la lista.')
    print('7. Sacar un elemento de una posicion en especifico.')
    print('8. Concantenar dos listas.')
-   print('9. Remplazar algun elemento de la lista.\n')
-   print(f"Lista A\t\t\t\tLista B\n{lista_a}\t\t{lista_b}")    
+   print('9. Remplazar algun elemento de la lista.\n') 
 
 # segunda funcion: Contar cuantos elementos se encunetran en una lista
 def contador(lista_a):
@@ -36,15 +35,15 @@ def elemento(lista_a,n):
   return "no se encuentra en la lista"    
 
 # Quinta Funcion: Imprimir elementos de una lista        
-def impresion(lista_a):
-   return lista_a
+def impresion(lista_a,lista_b,lista_nueva):
+   return lista_a,lista_b,lista_nueva
 
 # Sexta Funcion: Agregar elementos a una lista
 def agregar(lista_a,n):
   for i in range(n):
     m=int(input("Ingrese el nuevo elemento a la lista: "))
     lista_a.append(m)
-  return lista_a  
+  return "los elemento fueron añadidos"
 
 # Septima Funcion: Eliminar elemento de un lista
 def eliminar_elemento(lista,n):
@@ -52,28 +51,29 @@ def eliminar_elemento(lista,n):
   for i in lista_a: 
     if i==n:
       lista.remove(i)
-      return  f"fue borrado {lista_a}"
+      return  "fue borrado"
   return "no fue encontrado"
 
 # Octava Funcion: Eliminar elemento de una lista por su posicion
 def eliminacion_posicion(lista_a,n):
    if n<=len(lista_a):
       del lista_a[n]
-      return f"fue eliminada {lista_a}"
+      return "fue eliminada"
    else:
       return "se encuentra fuera del rango"
 
 # Novena Funcion: Concatenacion de dos listas
-def concatenar(lista_a,lista_b,lista_nueva):
+def concatenar(lista_a,lista_b):
+   global lista_nueva
    lista_nueva=lista_a+lista_b
-   return sorted(lista_nueva)
+   return "fue existoso"
 
 # Decima Funcion: Remover elemento y agregar elemento nuevo
 def remover_añadir(lista_a,n):
    if n<=len(lista_a):
     b=int(input("Ingrese el elemento que desea añadir: "))
     lista_a[n]= b
-    return lista_a
+    return "fue remplazado"
    else:
       return "Posicion fuera de rango"
    
@@ -88,7 +88,7 @@ def implementacion(x):
       n=int(input("Ingrese el elemento que desea saber si se encuentra en la lista: "))
       print(f"El elemento {n} {elemento(lista_a,n)}")
    elif x==4:
-      print(impresion(lista_a))
+      print(impresion(lista_a,lista_b,lista_nueva))
    elif x==5:
       n=int(input("¿Cuantos elementos desea ingresar?: "))
       print(f"Los elementos fueron ingresados {agregar(lista_a,n)}")
@@ -99,10 +99,10 @@ def implementacion(x):
       n=int(input("Ingrese la posicion del elemento que desea eliminar de la lista: "))
       print(f"La posicion {n} {eliminacion_posicion(lista_a,n)}")
    elif x==8:
-      print(f"La concatenacion de las listas A y B generaron {concatenar(lista_a,lista_b,lista_nueva)}")
+      print(f"La concatenacion de las listas A y B  {concatenar(lista_a,lista_b)}")
    elif x==9:
       n=int(input("Ingrese la posicion que desea remplazar de la lista: "))
-      print(f"El elemento en la posicion {n} fue remplazado {remover_añadir(lista_a,n)} ")
+      print(f"El elemento en la posicion {n} {remover_añadir(lista_a,n)} ")
 
 
 # Inicio de codigo
@@ -139,12 +139,16 @@ elif (opcion==2):
    #Fin de bucles creacion de listas
 #Fin de condicional de relleno de listas
 
-#Llamado a la funcion de menu
-ml(lista_a,lista_b)
-x=int(input("Ingrese la opcion que desea: "))
-#Ciclo antibobos
-while x<=0 or x>9:
-   print("Opcion no valida")
-   x=int(input("Ingrese la opcion que desea: "))
-        
-implementacion(x)         
+while True:
+   aceptacion=int(input("Desea ingresar 1 para si, otro numero para no: "))
+   if aceptacion==1:
+      ml(lista_a,lista_b)
+      x=int(input("Ingrese la opcion que desea: "))
+      #Ciclo antibobos
+      while x<=0 or x>9:
+         print("Opcion no valida")
+         x=int(input("Ingrese la opcion que desea: "))
+      #Llamado de la funcion para la utilizacion de las funciones        
+      implementacion(x)
+   else:
+      break         
